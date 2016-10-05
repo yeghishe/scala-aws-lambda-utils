@@ -12,7 +12,7 @@
 [![Chat][chat-badge]][chat-url]
 
 ```
-"com.github.yeghishe" %% "scala-aws-lambda-utils" % "0.0.1"
+"io.github.yeghishe" %% "scala-aws-lambda-utils" % "0.0.1"
 ```
 [build-status-badge]: https://img.shields.io/travis/yeghishe/scala-aws-lambda-utils.svg?style=flat-square
 [build-status-url]: https://travis-ci.org/yeghishe/scala-aws-lambda-utils

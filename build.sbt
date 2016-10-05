@@ -1,5 +1,5 @@
 name          := "scala-aws-lambda-utils"
-organization  := "com.github.yeghishe"
+organization  := "io.github.yeghishe"
 version       := "0.0.1"
 scalaVersion  := "2.11.8"
 scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf8")
@@ -37,23 +37,3 @@ publishTo := {
   else
     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
 }
-pomExtra := (
-  <url>http://yeghishe.github.io/</url>
-  <licenses>
-    <license>
-      <name>Apache-2.0</name>
-      <url>http://opensource.org/licenses/Apache-2.0</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-  <scm>
-    <url>https://github.com/yeghishe/</url>
-    <connection>scm:git:git@github.com:yeghishe/.git</connection>
-  </scm>
-  <developers>
-    <developer>
-      <id>ypiruzyan</id>
-      <name>Yeghishe Piruzyan</name>
-      <url>http://yeghishe.github.io/</url>
-    </developer>
-  </developers>)

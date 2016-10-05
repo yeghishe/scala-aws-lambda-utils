@@ -10,12 +10,13 @@ import io.circe.{ Decoder, Encoder }
 import org.apache.log4j.Logger
 
 abstract class Handler[T, R](implicit decoder: Decoder[T], encoder: Encoder[R]) extends RequestStreamHandler {
-  import encoding._
+  import Encoding._
 
   protected implicit val logger = Logger.getLogger(this.getClass)
 
   protected def handler(input: T, context: Context): R
-  def handleRequest(is: InputStream, os: OutputStream, context: Context): Unit = out(handler(in(is), context), os)
+  def handleRequest(is: InputStream, os: OutputStream, context: Context): Unit =
+    in(is).flatMap(i => out(handler(i, context), os)).get
 }
 
 abstract class FutureHandler[T, R](d: Option[Duration] = None)(
