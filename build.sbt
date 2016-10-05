@@ -1,6 +1,6 @@
 name          := "scala-aws-lambda-utils"
 organization  := "io.github.yeghishe"
-version       := "0.0.1"
+version       := "0.0.2"
 scalaVersion  := "2.11.8"
 scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf8")
 
@@ -8,8 +8,8 @@ resolvers += Resolver.jcenterRepo
 
 libraryDependencies ++= {
   val scalaTestV = "3.0.0"
-  val scalaMockV = "3.2.2"
-  val circeV     = "0.5.1"
+  val scalaMockV = "3.3.0"
+  val circeV     = "0.5.2"
   val awsLambdaV = "1.1.0"
   Seq(
     "io.circe"      %% "circe-core"                  % circeV,

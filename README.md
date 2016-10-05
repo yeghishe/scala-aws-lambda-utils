@@ -12,7 +12,7 @@
 [![Chat][chat-badge]][chat-url]
 
 ```
-"io.github.yeghishe" %% "scala-aws-lambda-utils" % "0.0.1"
+"io.github.yeghishe" %% "scala-aws-lambda-utils" % "0.0.2"
 ```
 [build-status-badge]: https://img.shields.io/travis/yeghishe/scala-aws-lambda-utils.svg?style=flat-square
 [build-status-url]: https://travis-ci.org/yeghishe/scala-aws-lambda-utils
@@ -22,7 +22,7 @@
 [download-url]: https://maven-badges.herokuapp.com/maven-central/io.github.yeghishe/scala-aws-lambda-utils_2.11
 [tag-badge]: https://img.shields.io/github/tag/yeghishe/scala-aws-lambda-utils.svg?style=flat-square
 [tag-url]: https://github.com/yeghishe/scala-aws-lambda-utils/tags
-[commits-badge]: https://img.shields.io/github/commits-since/yeghishe/scala-aws-lambda-utils/v0.0.1.svg?style=flat-square
+[commits-badge]: https://img.shields.io/github/commits-since/yeghishe/scala-aws-lambda-utils/v0.0.2.svg?style=flat-square
 [commits-url]: https://github.com/yeghishe/scala-aws-lambda-utils/commits/master
 [issues-badge]: https://img.shields.io/github/issues/yeghishe/scala-aws-lambda-utils.svg?style=flat-square
 [issues-url]: https://github.com/yeghishe/scala-aws-lambda-utils/issues
