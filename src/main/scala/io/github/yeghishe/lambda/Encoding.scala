@@ -1,6 +1,6 @@
 package io.github.yeghishe.lambda
 
-import java.io.{ InputStream, OutputStream }
+import java.io.{InputStream, OutputStream}
 
 import scala.io.Source
 import scala.util.Try

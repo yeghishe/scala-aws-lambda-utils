@@ -1,7 +1,7 @@
-name          := "scala-aws-lambda-utils"
-organization  := "io.github.yeghishe"
-version       := "0.0.3"
-scalaVersion  := "2.12.1"
+name := "scala-aws-lambda-utils"
+organization := "io.github.yeghishe"
+version := "0.0.3"
+scalaVersion := "2.12.1"
 scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf8")
 
 resolvers += Resolver.jcenterRepo
@@ -15,8 +15,8 @@ libraryDependencies ++= {
     "io.circe"      %% "circe-core"                  % circeV,
     "io.circe"      %% "circe-generic"               % circeV,
     "io.circe"      %% "circe-parser"                % circeV,
-    "com.amazonaws"  % "aws-lambda-java-core"        % awsLambdaV,
-    "com.amazonaws"  % "aws-lambda-java-log4j"       % "1.0.0",
+    "com.amazonaws" % "aws-lambda-java-core"         % awsLambdaV,
+    "com.amazonaws" % "aws-lambda-java-log4j"        % "1.0.0",
     "org.scalamock" %% "scalamock-scalatest-support" % scalaMockV % "it,test"
   )
 }
@@ -28,11 +28,13 @@ initialCommands := "import io.github.yeghishe.lambda._"
 
 publishMavenStyle := true
 publishArtifact in Test := false
-pomIncludeRepository := { _ => false }
+pomIncludeRepository := { _ =>
+  false
+}
 publishTo := {
   val nexus = "https://oss.sonatype.org/"
   if (isSnapshot.value)
     Some("snapshots" at nexus + "content/repositories/snapshots")
   else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+    Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }

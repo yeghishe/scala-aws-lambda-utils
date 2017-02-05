@@ -1,12 +1,12 @@
 package io.github.yeghishe.lambda
 
-import java.io.{ InputStream, OutputStream }
+import java.io.{InputStream, OutputStream}
 
-import scala.concurrent.{ Await, ExecutionContext, Future }
+import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.concurrent.duration._
 
-import com.amazonaws.services.lambda.runtime.{ Context, RequestStreamHandler }
-import io.circe.{ Decoder, Encoder }
+import com.amazonaws.services.lambda.runtime.{Context, RequestStreamHandler}
+import io.circe.{Decoder, Encoder}
 import org.apache.log4j.Logger
 
 abstract class Handler[T, R](implicit decoder: Decoder[T], encoder: Encoder[R]) extends RequestStreamHandler {
@@ -20,8 +20,7 @@ abstract class Handler[T, R](implicit decoder: Decoder[T], encoder: Encoder[R]) 
 }
 
 abstract class FutureHandler[T, R](d: Option[Duration] = None)(
-    implicit
-    decoder: Decoder[T],
+    implicit decoder: Decoder[T],
     encoder: Encoder[R],
     ec: ExecutionContext
 ) extends Handler[T, R] {
